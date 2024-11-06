@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Car Widget</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+    $(function() {
+        $( ".controlgroup" ).controlgroup();
+        $( ".controlgroup-vertical" ).controlgroup({ "direction": "vertical" });
+        $(".widget input[type=button], .widget button").button();
+        $("button").on("click", function(event) {
+            event.preventDefault();
+        });
+    });
+    </script>
+    <style>
+        .widget {
+            margin: 20px;
+        }
+        .controlgroup {
+            margin-bottom: 15px;
+        }
+        .controlgroup-vertical {
+            width: 150px;
+        }
+        .ui-controlgroup-vertical > button.ui-button,
+        .ui-controlgroup-vertical > .ui-controlgroup-label {
+            text-align: center;
+        }
+        #car-type-button {
+            width: 120px;
+        }
+        .ui-controlgroup-horizontal .ui-spinner-input {
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rental Car Widget</h1>
+        <div class="row">
+            <div class="col-1">
+                <li>
+                    <ul><a href="../index.html">Go back</a></ul>
+                </li>
+            </div>
+            <div class="col-2">
+                <div class="widget">
+                    <h2>Genre Selection</h2>
+                    <fieldset>
+                        <legend>Choose your Genre</legend>
+                        <div class="controlgroup">
+                            <select id="car-type">
+                                <option>Romance</option>
+                                <option>Thriller</option>
+                                <option>Regression</option>
+                                <option>Gore</option>
+                                <option>Martial Art</option>
+                                <option>School Life</option>
+                                <option>Guns</option>
+                            </select>
+                            <label for="transmission-standard">Manga/Manwha</label>
+                            <input type="radio" name="transmission" id="transmission-standard">
+                            <label for="transmission-automatic">Anime</label>
+                            <input type="radio" name="transmission" id="transmission-automatic">
+                            <label for="insurance">Light Novel</label>
+                            <input type="checkbox" name="insurance" id="insurance">
+                            <label for="horizontal-spinner" class="ui-controlgroup-label"># of Books</label>
+                            <input id="horizontal-spinner" class="ui-spinner-input">
+                            <button>Book Now!</button>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Choose your Genre (Vertical)</legend>
+                        <div class="controlgroup-vertical">
+                            <select>
+                                <option>Romance</option>
+                                <option>Thriller</option>
+                                <option>Regression</option>
+                                <option>Gore</option>
+                                <option>Martial Art</option>
+                                <option>School Life</option>
+                                <option>Guns</option>
+                            </select>
+                            <label for="transmission-standard-v">Manga/Manwha</label>
+                            <input type="radio" name="transmission-v" id="transmission-standard-v">
+                            <label for="transmission-automatic-v">Anime</label>
+                            <input type="radio" name="transmission-v" id="transmission-automatic-v">
+                            <label for="insurance-v">Light Novel</label>
+                            <input type="checkbox" name="insurance" id="insurance-v">
+                            <label for="vertical-spinner" class="ui-controlgroup-label"># of Books</label>
+                            <input id="vertical-spinner" class="ui-spinner-input">
+                            <button id="book">Book Now!</button>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>All you want to know is in there.(I think) &copy; 2022</p>  
+    </footer>
+    
+</body>
+</html>

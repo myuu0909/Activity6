@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Selector</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+    $(function() {
+        $("#speed").selectmenu();
+        $("#files").selectmenu();
+        $("#number")
+            .selectmenu()
+            .selectmenu("menuWidget")
+            .addClass("overflow");
+        $("#salutation").selectmenu();
+    });
+    </script>
+    <style>
+        fieldset {
+            border: 0;
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #6a5acd;
+            font-size: 18px;
+            margin: 20px 0 5px 0;
+        }
+        .overflow {
+            height: 200px;
+        }
+        .widget {
+            margin: 20px;
+            background-color: #f8f8ff;
+            border-radius: 15px;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #ff6347;
+        }
+        footer {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #ff6347;
+            background-color: #f0f8ff;
+            padding: 10px;
+            border-top: 2px solid #6a5acd;
+        }
+        .col-1 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .col-2 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Anime Select Menu</h1>
+        <div class="row">
+            <div class="col-1">
+                <li>
+                    <ul><a href="../index.html">Go back to the anime world</a></ul>
+                </li>
+            </div>
+            <div class="col-2">
+                <div class="widget">
+                    <form action="#">
+                        <fieldset>
+                            <label for="speed">Select Anime Speed</label>
+                            <select name="speed" id="speed">
+                                <option>Slow-Paced</option>
+                                <option>Medium-Paced</option>
+                                <option selected="selected">Fast-Paced</option>
+                                <option>Action-Packed</option>
+                                <option>Ultra Fast</option>
+                            </select>
+
+                            <label for="files">Select Anime Genre</label>
+                            <select name="files" id="files">
+                                <optgroup label="Shounen">
+                                    <option value="naruto">Naruto</option>
+                                    <option value="onepiece">One Piece</option>
+                                </optgroup>
+                                <optgroup label="Shoujo">
+                                    <option value="sailormoon">Sailor Moon</option>
+                                    <option value="cardcaptors">Cardcaptor Sakura</option>
+                                </optgroup>
+                                <optgroup label="Mecha">
+                                    <option value="gurrenlagann">Tengen Toppa Gurren Lagann</option>
+                                    <option value="evangelion">Neon Genesis Evangelion</option>
+                                </optgroup>
+                            </select>
+
+                            <label for="number">Select Episode Number</label>
+                            <select name="number" id="number">
+                                <option>1</option>
+                                <option selected="selected">2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+
+                            <label for="salutation">Select Character Title</label>
+                            <select name="salutation" id="salutation">
+                                <option disabled="" selected="">Please pick a character</option>
+                                <option>Hero</option>
+                                <option>Villain</option>
+                                <option>Sidekick</option>
+                                <option>Sensei</option>
+                                <option>Anti-Hero</option>
+                            </select>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Anime World &copy; 2024 - Powered by Otaku Love</p>
+    </footer>
+</body>
+</html>

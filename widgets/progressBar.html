@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery UI Progressbar</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+    $(function() {
+        $("#progressbar").progressbar({
+            value: 37 // Set the progress value
+        });
+    });
+    </script>
+    <style>
+        .widget {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Progressbar of your time in this site</h1>
+        <div class="row">
+            <div class="col-1">
+                <li>
+                    <ul><a href="../index.html">Go back</a></ul>
+                </li>
+            </div>
+            <div class="col-2">
+                <div class="widget">
+                    <h2>Current Progress</h2>
+                    <div id="progressbar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>All you want to know is in there.(I think) &copy; 2022</p>  
+    </footer>
+</body>
+</html>

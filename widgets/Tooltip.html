@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery UI Tooltip - Anime</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+    $(function() {
+        $(document).tooltip();
+    });
+    </script>
+    <style>
+        label {
+            display: inline-block;
+            width: 5em;
+        }
+        .widget {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Anime Tooltip Widget</h1>
+        <div class="row">
+            <div class="col-1">
+                <ul><a href="../index.html">Go back</a></ul>
+            </div>
+            <div class="col-2">
+                <p>
+                    <a href="#" title="Attack on Titan is a popular anime series about humanity's fight for survival against giant humanoid creatures.">Attack on Titan</a> is one of the most intense and highly acclaimed anime series. It revolves around Eren Yeager, who fights for humanity's survival against Titans.
+                </p>
+                <p>
+                    Another popular anime, <a href="#" title="Naruto follows the story of Naruto Uzumaki, a young ninja with dreams of becoming the strongest ninja and leading his village.">Naruto</a>, showcases the journey of a ninja boy who strives to become the leader of his village despite his many challenges.
+                </p>
+                <p>
+                    <a href="#" title="My Hero Academia follows a young boy named Izuku Midoriya in a world where people have superpowers called Quirks. He strives to become a hero, despite being born without powers.">My Hero Academia</a> is another anime that has captured hearts worldwide with its story of aspiring heroes and their superpowers.
+                </p>
+                <p>
+                    Tooltips in this example can help you discover more about anime series like <a href="#" title="Demon Slayer is an anime about a young boy who becomes a demon slayer to avenge his family and save his demon-turned sister.">Demon Slayer</a> and more!
+                </p>
+                <p>
+                    <label for="anime">What's your favorite anime?</label>
+                    <input id="anime" title="Let us know your favorite anime. It's always fun to chat about anime with fellow fans!">
+                </p>
+                <p>Hover over the field to see the tooltip with a quick description about anime.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>All you want to know is in there.(I think) &copy; 2022</p>  
+    </footer>
+</body>
+</html>

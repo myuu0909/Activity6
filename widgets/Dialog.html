@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery UI Dialog</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $("#dialog").dialog({
+                autoOpen: true, // Automatically open the dialog on page load
+                modal: true, // Make the dialog modal
+                buttons: {
+                    "Close": function() {
+                        $(this).dialog("close"); // Close the dialog when the close button is clicked
+                    }
+                }
+            });
+        });
+    </script>
+    <style>
+        .widget {
+            margin: 20px;
+        }
+
+        /* You can add more custom styles here */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dialog Widget</h1>
+        <div class="row">
+            <div class="col-1">
+                <!-- Go back link, no need for extra <ul> tags -->
+                <a href="../index.html">Go back</a>
+            </div>
+            <div class="col-2">
+                <div class="widget">
+                    <h2>Basic Warning</h2>
+                    <div id="dialog" title="Warning!">
+                        <p>Excessive watching or reading can negatively impact both physical and mental health. Prolonged screen time often causes eye strain, discomfort, and poor posture, leading to back and neck pain. It can also result in mental fatigue, reducing concentration and productivity. Moreover, late-night media consumption disrupts sleep patterns, as blue light interferes with melatonin production. Continuous exposure to distressing content can increase stress, anxiety, and even feelings of isolation. Additionally, excessive screen time may decrease social interactions, fostering loneliness. Balancing media consumption with physical activity, relaxation, and offline socializing is crucial to avoid these negative effects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>All you want to know is in there.(I think) &copy; 2022</p>  
+    </footer>
+</body>
+
+</html>

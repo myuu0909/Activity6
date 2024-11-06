@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Search a manwha</h1>
+        <div class="row">
+            <div class="col-1">
+                <li>
+                    <ul><a href="../index.html">Go back</a></ul>
+                </li>
+            </div>
+            <div class="col-2">
+                <label for="tags">Tags: </label>
+                <input id="tags">
+            </div>
+        </div>
+    </div>  
+
+    <footer>
+        <p>All you want to know is in there.(I think) &copy; 2022</p>  
+    </footer>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+        $(function() {
+          // Initialize autocomplete
+          var availableTags = [
+            "The Breaker", "Versatile Mage", "Tales of Demons and Gods", "Heavenly Martial God", "The Legendary Moonlight Sculptor", "A Returner's Magic Should Be Special", 
+            " The God of High School", "Martial Peak", "Frost Phoenix", "Eon Rage", "The Sage of Epoch", 
+            "Rhythm Shifter", "Quantum Alchemist", "Wind breaker", "Solo Leveling", "Secret Class", "Mount Hua Sect", 
+            "The Hole", "Circle", "Killer Peter", "Goblin king", "Redo of Healer"
+          ];
+          $("#tags").autocomplete({
+            source: availableTags
+          });
+        });
+      </script>
+</body>
+</html>

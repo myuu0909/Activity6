@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 6</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        /* Basic styles for the menu */
+        .menu {
+            list-style: none;
+            padding: 0;
+        }
+    
+        .menu > li {
+            position: relative;
+            display: inline-block;
+        }
+    
+        .menu a {
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            color: #fff; /* Changed text color to white */
+        }
+    
+        /* Hide the dropdown content initially */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+    
+        /* Show the dropdown when hovering over the menu item */
+        .menu > li:hover .dropdown {
+            display: block;
+        }
+    
+        /* Style for the dropdown links */
+        .dropdown ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+    
+        .dropdown ul li a {
+            padding: 10px;
+            display: block;
+            color: #fff; /* Changed dropdown links color to white */
+        }
+    
+        .dropdown ul li a:hover {
+            background-color: #5683ad;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Manwha Session</h1>
+        <div class="row">
+            <div class="col-1">
+                <ul class="menu">
+                    <li><a href="pages/page1.html" >Content</a></li>
+                    <li>
+                        <a href="#">Widgets</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li><a href="widgets/Accordion.html" style="color: black;">Accordion</a></li>
+                                <li><a href="widgets/autoComplete.html" style="color: black;">Autocomplete</a></li>
+                                <li><a href="widgets/Button.html" style="color: black;">Button</a></li>
+                                <li><a href="widgets/checkbocRadio.html" style="color: black;">Checkboxradio</a></li>
+                                <li><a href="widgets/controlGroup.html" style="color: black;">Controlgroup</a></li>
+                                <li><a href="widgets/datePicker.html" style="color: black;">Datepicker</a></li>
+                                <li><a href="widgets/Dialog.html" style="color: black;">Dialog</a></li>
+                                <li><a href="widgets/Menu.html" style="color: black;">Menu</a></li>
+                                <li><a href="widgets/progressBar.html" style="color: black;">Progressbar</a></li>
+                                <li><a href="widgets/selectMenu.html" style="color: black;">Selectmenu</a></li>
+                                <li><a href="widgets/Slider.html" style="color: black;">Slider</a></li>
+                                <li><a href="widgets/Spinner.html" style="color: black;">Spinner</a></li>
+                                <li><a href="widgets/Tabs.html" style="color: black;">Tabs</a></li>
+                                <li><a href="widgets/Tooltip.html" style="color: black;">Tooltip</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <button onclick="confirmSubmission();">Click Me</button>
+                <button>Jquery Button</button>
+                <button id="idbutton">ID</button>
+                <button class="classbutton">CLASS</button>
+                <button id="Information">Click Me to Show Info</button>
+                <button id="hideInfo">Click Me to Hide Info</button>
+                <h1 id="showInfo" style="display:none;">Just kidding!! hahah lol.</h1>
+            </div>
+        </div>
+    </div>  
+    
+    <footer>
+        <p>All you want to know is in there.(I think) &copy; 2022</p>  
+    </footer>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#idbutton").click(function(){
+                alert("ID Button was clicked");
+            });
+
+            $(".classbutton").click(function(){
+                alert("Class Button was clicked");
+            });
+
+            $("#Information").click(function(){
+                $("#showInfo").show();
+            });
+
+            $("#hideInfo").click(function(){
+                $("#showInfo").hide();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery UI Menu</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+    $(function() {
+        $("#menu").menu();
+    });
+    </script>
+    <style>
+        .widget {
+            margin: 20px;
+        }
+        .ui-menu { width: 150px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Menu Widget</h1>
+        <div class="row">
+            <div class="col-1">
+                <li>
+                    <ul><a href="../index.html">Go back</a></ul>
+                </li>
+            </div>
+            <div class="col-2">
+                <div class="widget">
+                    <h2>Select an Option</h2>
+                    <ul id="menu">
+                        <li class="ui-state-disabled"><div>Games (n/a)</div></li>
+                        <li><div>Books</div></li>
+                        <li><div>Clothing</div></li>
+                        <li><div>DVD</div>
+                            <ul>
+                                <li class="ui-state-disabled"><div>Home Entertainment</div></li>
+                                <li><div>Rental</div></li>
+                                <li><div>Buy</div></li>
+                            </ul>
+                        </li>
+                        <li><div>Movies</div></li>
+                        <li><div>Music</div>
+                            <ul>
+                                <li><div>Nano ripe</div>
+                                    <ul>
+                                        <li><div>Kimi to no Yakusoku o Kazoeyo</div></li>
+                                        <li><div>Tōmei na Sekai</div></li>
+                                    </ul>
+                                </li>
+                                <li><div>Lisa</div>
+                                    <ul>
+                                        <li><div>Gurunge</div></li>
+                                        <li><div>Crossing Field</div></li>
+                                        <li><div>Rising Hope</div></li>
+                                    </ul>
+                                </li>
+                                <li><div>None</div></li>
+                            </ul>
+                        </li>
+                        <li class="ui-state-disabled"><div>Specials (n/a)</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>All you want to know is in there.(I think) &copy; 2022</p>  
+    </footer>
+</body>
+</html>

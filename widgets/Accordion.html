@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manhwa Information</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <style>
+        /* Custom Styles for Anime Theme */
+        body {
+            font-family: 'Century Gothic', sans-serif;
+            background-color: #141414; /* Darker background for a more dramatic anime feel */
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to bottom, #2a2a2a, #141414); /* Subtle gradient for depth */
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff6347;
+            font-size: 36px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .col-1 {
+            width: 20%;
+            font-size: 18px;
+            padding: 10px;
+            background-color: #e6e6fa;
+            border-radius: 10px;
+        }
+
+        .col-2 {
+            width: 75%;
+            font-size: 16px;
+            padding: 15px;
+            background-color: #f8f8ff;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul a {
+            text-decoration: none;
+            color: #ff6347;
+        }
+
+        ul a:hover {
+            color: #6a5acd;
+        }
+
+        #accordion h3 {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        #accordion div {
+            padding: 10px;
+            font-style: oblique;
+        }
+
+        footer {
+            background-color: #6f4cff;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+            border-radius: 8px;
+        }
+
+        /* Anime-inspired styles */
+        .dropdown-content {
+            background-color: #2b2b2b; /* Dark dropdown background with light text */
+        }
+        .dropdown-content a {
+            color: #e0e0e0;
+        }
+        .dropdown-content a:hover {
+            background-color: #444444; /* Lighter gray hover effect */
+        }
+
+        .content-item {
+            display: none;
+            padding: 15px;
+            margin-top: 10px;
+            border: 1px solid #666666;
+            background-color: #2c2c2c;
+            color: #e6e6e6;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Manhwa Information</h1>
+        <div class="row">
+            <div class="col-1">
+                <ul>
+                    <li><a href="../index.html">Index</a></li>
+                    <li><a href="../pages/page1.html">Info about the student</a></li>
+                </ul>
+            </div>
+            <div class="col-2">
+                <div id="accordion">
+                    <h3>Mount Hua Sect</h3>
+                    <div>
+                        <p>The Mount Hua Sect is a legendary Taoist sect located on the mystical Mount Hua. Known for their martial arts, especially their swordsmanship, they are one of the five great sects in the world. The sect is famous for its rigorous training, elite disciples, and a rich tradition of mystical teachings. As their martial prowess grows, the sect becomes embroiled in an epic struggle for power, honor, and survival in a world filled with rival factions and dangerous forces.</p>
+                        <p>At the heart of their teachings lies the pursuit of spiritual enlightenment and inner strength, but the sect is not without its internal conflicts. As heroes rise and fall, the Mount Hua Sect's future is uncertain, and its martial arts mastery is put to the ultimate test in a battle against dark forces and treacherous enemies.</p>
+                    </div>
+                    <h3>Study Group</h3>
+                    <div>
+                        <p><strong>Study Group</strong> is a South Korean webcomic (manhwa) that revolves around a group of high school students who form a study group to improve their academic performance. The story typically highlights the dynamics between the members, who come from different backgrounds and personalities. While initially united by a common goal of acing exams and boosting their grades, their journey evolves to include themes of friendship, rivalry, self-improvement, and personal growth.</p>
+                        <p>The main protagonist often finds themselves struggling with school life, maybe due to poor grades, family pressure, or a lack of motivation, but through the group, they discover new strengths and the power of collaboration. As they face both academic and personal challenges, the characters develop deeper relationships and learn valuable life lessons, making the story relatable to those who have experienced the pressures of school life.</p>
+                        <p>The series can mix humor, slice-of-life moments, and some romantic or dramatic elements as the characters interact and support each other, creating a compelling narrative about overcoming obstacles together.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <footer>
+        <p>All you want to know is in there.(I think) &copy; 2022</p>  
+    </footer>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            $( "#accordion" ).accordion();
+        });
+    </script>
+</body>
+</html>

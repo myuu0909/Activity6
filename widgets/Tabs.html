@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery UI Tabs - Anime</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+        });
+    </script>
+    <style>
+        .widget {
+            margin: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* Fading effect for the header */
+        h1 {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Tab container and tab styling */
+        #tabs {
+            animation: slideIn 1.5s ease-out;
+            opacity: 1;
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Tab list styles */
+        #tabs ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        #tabs li {
+            padding: 10px 20px;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #tabs li:hover {
+            background-color: #ff4081;
+            transform: scale(1.05);
+        }
+
+        /* Tab panel content styling */
+        #tabs .ui-tabs-panel {
+            animation: fadeInUp 1.5s ease-out;
+            opacity: 1;
+        }
+
+        #tabs .ui-tabs-panel.ui-tabs-active {
+            opacity: 1;
+        }
+
+        /* Anime-style hover effect for links */
+        a {
+            position: relative;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        a:hover {
+            color: #ff4081; /* Pink anime-style hover color */
+        }
+
+        a:hover:before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Anime World - Tabs Widget</h1>
+        <div class="row">
+            <div class="col-1">
+                <a href="../index.html">Go back</a>
+            </div>
+            <div class="col-2">
+                <div id="tabs" class="widget">
+                    <ul>
+                        <li><a href="#tabs-1">Popular Anime</a></li>
+                        <li><a href="#tabs-2">Anime Genres</a></li>
+                        <li><a href="#tabs-3">Anime Recommendations</a></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <p>Anime has taken the world by storm, and here are some of the most popular ones today:</p>
+                        <ul>
+                            <li><strong>Attack on Titan</strong> - A thrilling story of survival in a world overrun by giant humanoid creatures.</li>
+                            <li><strong>My Hero Academia</strong> - Follows a young boy born without superpowers in a world where they are common, who dreams of becoming a hero.</li>
+                            <li><strong>One Piece</strong> - The adventures of Monkey D. Luffy and his pirate crew as they search for the ultimate treasure, the One Piece.</li>
+                            <li><strong>Demon Slayer</strong> - A tale of a young boy battling demons to save his sister and avenge his family.</li>
+                        </ul>
+                    </div>
+                    <div id="tabs-2">
+                        <p>Anime comes in a variety of genres, each offering different styles of storytelling. Here are some of the most beloved genres:</p>
+                        <ul>
+                            <li><strong>Shonen</strong> - Anime aimed at a younger male audience, often filled with action and adventure, like Naruto and Dragon Ball Z.</li>
+                            <li><strong>Shoujo</strong> - Anime targeted at young girls, typically featuring romance and emotional stories, like Sailor Moon and Cardcaptor Sakura.</li>
+                            <li><strong>Seinen</strong> - Anime designed for adult men, often exploring more complex themes, like Tokyo Ghoul and Attack on Titan.</li>
+                            <li><strong>Slice of Life</strong> - Realistic and heartwarming stories about everyday life, like Clannad and Your Lie in April.</li>
+                        </ul>
+                    </div>
+                    <div id="tabs-3">
+                        <p>If you're new to anime, here are a few recommendations to start your journey:</p>
+                        <ul>
+                            <li><strong>Fullmetal Alchemist: Brotherhood</strong> - A tale of two brothers using alchemy to find the Philosopher's Stone and right the wrongs of their past.</li>
+                            <li><strong>Spirited Away</strong> - A magical film by Studio Ghibli, following a young girl trapped in a mystical world and her journey to return to her family.</li>
+                            <li><strong>Death Note</strong> - A psychological thriller about a high school student who gains the power to kill anyone whose name he writes in a mysterious notebook.</li>
+                            <li><strong>Neon Genesis Evangelion</strong> - A series that blends giant robots with deep psychological and philosophical themes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>All you want to know is in there.(I think) &copy; 2022</p>  
+    </footer>
+</body>
+
+</html>
